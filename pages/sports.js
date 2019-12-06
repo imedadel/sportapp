@@ -30,7 +30,7 @@ function Page({ sports }) {
 			<div className="flex flex-wrap justify-between">
 				{filteredSports.length > 0 &&
 					filteredSports.map((sport, key) => (
-						<Link href={sport.attributes.name}>
+						<Link href={`/sports/${sport.attributes.name}`}>
 							<div
 								key={key}
 								className="w-64 rounded overflow-hidden shadow-lg mr-2 mb-4"
