@@ -15,12 +15,12 @@ function Index() {
 							Sport App
 						</h1>
 						<div className="max-w-xl mx-auto pb-8 text-xl sm:text-2xl text-gray-700 sm:text-center leading-snug sm:tracking-snug">
-							<p className="pb-1">The next best sport app.</p>
+							<p className="pb-1">The next best sport app for students.</p>
 						</div>
 						<div className="text-center">
-							<Link href={"/commencer"}>
+							<Link href={"/start"}>
 								<span className="bg-teal-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded text-3xl cursor-pointer">
-									Commencer
+									Let's Start
 								</span>
 							</Link>
 						</div>
