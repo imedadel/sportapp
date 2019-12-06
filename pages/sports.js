@@ -28,8 +28,11 @@ function Page({ sports }) {
 			</div>
 			<div className="flex flex-wrap justify-between">
 				{filteredSports.length > 0 &&
-					filteredSports.map(sport => (
-						<div className="w-64 rounded overflow-hidden shadow-lg mr-2 mb-4">
+					filteredSports.map((sport, key) => (
+						<div
+							key={key}
+							className="w-64 rounded overflow-hidden shadow-lg mr-2 mb-4"
+						>
 							<img
 								className="w-full h-40"
 								src={
