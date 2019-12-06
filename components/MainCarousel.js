@@ -2,8 +2,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from "react-responsive-carousel"
 
 const images = [
-	"https://picsum.photos/id/237/500/250",
-	"https://picsum.photos/id/227/500/250",
+	require("../images/image-1.png"),
+	require("../images/image-2.jpg"),
 ]
 
 function MainCarousel() {
