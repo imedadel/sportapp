@@ -2,6 +2,7 @@ import React from "react"
 import "../styles/index.css"
 import { useRouter } from "next/router"
 import fetch from "isomorphic-unfetch"
+import Link from "next/link"
 
 function Page({ sports }) {
 	const router = useRouter()
@@ -29,30 +30,31 @@ function Page({ sports }) {
 			<div className="flex flex-wrap justify-between">
 				{filteredSports.length > 0 &&
 					filteredSports.map((sport, key) => (
-						<div
-							key={key}
-							className="w-64 rounded overflow-hidden shadow-lg mr-2 mb-4"
-						>
-							<img
-								className="w-full h-40"
-								src={
-									!!sport.relationships.images &&
-									sport.relationships.images.data &&
-									sport.relationships.images.data.length > 0
-										? sport.relationships.images.data[0].url
-										: `https://source.unsplash.com/500x250/?${sport.attributes.name}`
-								}
-								alt={sport.attributes.name}
-							/>
-							<div className="px-6 py-4">
-								<div className="font-bold text-xl mb-2">
-									{sport.attributes.name}
+						<Link href={sport.attributes.name}>
+							<div
+								key={key}
+								className="w-64 rounded overflow-hidden shadow-lg mr-2 mb-4"
+							>
+								<img
+									className="w-full h-40"
+									src={
+										!!sport.relationships.images &&
+										sport.relationships.images.data &&
+										sport.relationships.images.data.length > 0
+											? sport.relationships.images.data[0].url
+											: `https://source.unsplash.com/500x250/?${sport.attributes.name}`
+									}
+									alt={sport.attributes.name}
+								/>
+								<div className="px-6 py-4">
+									<div className="font-bold text-xl mb-2">
+										{sport.attributes.name}
+									</div>
+									<p className="text-gray-700 text-base">
+										{sport.attributes.description}
+									</p>
 								</div>
-								<p className="text-gray-700 text-base">
-									{sport.attributes.description}
-								</p>
-							</div>
-							{/* <div className="px-6 py-4">
+								{/* <div className="px-6 py-4">
 								<span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
 									#photography
 								</span>
@@ -63,7 +65,8 @@ function Page({ sports }) {
 									#winter
 								</span>
 							</div> */}
-						</div>
+							</div>
+						</Link>
 					))}
 			</div>
 		</main>
