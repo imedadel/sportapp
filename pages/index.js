@@ -18,11 +18,10 @@ function Index() {
 							<p className="pb-1">The next best sport app.</p>
 						</div>
 						<div className="text-center">
-							<Link
-								className="bg-teal-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded text-3xl"
-								to={"/commencer"}
-							>
-								Commencer
+							<Link href={"/commencer"}>
+								<span className="bg-teal-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded text-3xl cursor-pointer">
+									Commencer
+								</span>
 							</Link>
 						</div>
 						<div className="mx-auto max-w-4xl">
