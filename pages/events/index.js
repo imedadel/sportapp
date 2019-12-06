@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/index.css"
+import "../../styles/index.css"
 import { useRouter } from "next/router"
 import fetch from "isomorphic-unfetch"
 
