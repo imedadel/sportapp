@@ -45,7 +45,7 @@ function Page(data) {
 							<p>{def.description}</p>
 							<p>Prize: {def.prize}</p>
 							<button
-								className="bg-500-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
+								className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
 								onClick={() => {
 									window.localStorage.setItem("currentMilestone", def.name)
 								}}

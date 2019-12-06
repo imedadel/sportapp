@@ -33,7 +33,7 @@ function Page({ sports }) {
 						<Link href={`/sports/${sport.attributes.name}`}>
 							<div
 								key={key}
-								className="w-64 rounded overflow-hidden shadow-lg mr-2 mb-4"
+								className="w-64 rounded overflow-hidden shadow-lg mr-2 mb-4 pointer-cursor"
 							>
 								<img
 									className="w-full h-40"
