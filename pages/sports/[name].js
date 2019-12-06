@@ -1,5 +1,6 @@
 import { useRouter } from "next/router"
 import fetch from "isomorphic-unfetch"
+import "../../styles/index.css"
 
 function Page(data) {
 	const router = useRouter()
